@@ -21,4 +21,11 @@ return require('packer').startup(function(use)
 
   -- Colors
   use { 'dracula/vim', as = 'dracula' }
+  use  'arcticicestudio/nord-vim'
+
+  -- Telescope (awesome fuzzy finder)
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+  }
 end)

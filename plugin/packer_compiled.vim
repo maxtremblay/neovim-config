@@ -32,6 +32,10 @@ local function try_loadstring(s, component, name)
 end
 
 _G.packer_plugins = {
+  dracula = {
+    loaded = true,
+    path = "/home/maxime/.local/share/nvim/site/pack/packer/start/dracula"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/maxime/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
@@ -51,6 +55,18 @@ _G.packer_plugins = {
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/maxime/.local/share/nvim/site/pack/packer/start/packer.nvim"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/home/maxime/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+  },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/home/maxime/.local/share/nvim/site/pack/packer/start/popup.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/maxime/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   }
 }
 
