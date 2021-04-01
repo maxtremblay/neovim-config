@@ -8,8 +8,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
   execute 'packadd packer.nvim'
 end
 
-require('plugins.tree')
-require('plugins.completion')
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
@@ -41,3 +39,4 @@ return require('packer').startup(function(use)
   -- Comments toggle
   use 'b3nj5m1n/kommentary'
 end)
+
