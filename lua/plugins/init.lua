@@ -8,6 +8,9 @@ if fn.empty(fn.glob(install_path)) > 0 then
   execute 'packadd packer.nvim'
 end
 
+require('plugins.tree')
+require('plugins.completion')
+
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
@@ -18,6 +21,12 @@ return require('packer').startup(function(use)
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'kabouzeid/nvim-lspinstall'
+  use 'hrsh7th/nvim-compe'
+
+  -- Snippets
+  use 'hrsh7th/vim-vsnip'
+  use 'hrsh7th/vim-vsnip-integ'
+  use 'rafamadriz/friendly-snippets'
 
   -- Colors
   use { 'dracula/vim', as = 'dracula' }
@@ -28,4 +37,7 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim',
     requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
   }
+
+  -- Comments toggle
+  use 'b3nj5m1n/kommentary'
 end)
