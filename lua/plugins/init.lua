@@ -29,6 +29,8 @@ return require('packer').startup(function(use)
   -- Colors
   use { 'dracula/vim', as = 'dracula' }
   use  'arcticicestudio/nord-vim'
+  use 'ayu-theme/ayu-vim'
+  use 'rakr/vim-one'
 
   -- Telescope (awesome fuzzy finder)
   use {
