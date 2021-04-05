@@ -72,6 +72,12 @@ local lua_settings = {
   }
 }
 
+require'lspconfig'.racket_langserver.setup{
+    cmd = { "racket", "--lib", "racket-langserver" },
+    filetypes = { "racket", "scheme" },
+    on_attach = on_attach,
+}
+
 -- config that activates keymaps and enables snippet support
 local function make_config()
   local capabilities = vim.lsp.protocol.make_client_capabilities()

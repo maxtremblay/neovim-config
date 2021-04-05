@@ -40,5 +40,8 @@ return require('packer').startup(function(use)
 
   -- Comments toggle
   use 'b3nj5m1n/kommentary'
+
+  -- Languages
+  use  'wlangstroth/vim-racket'
 end)
 

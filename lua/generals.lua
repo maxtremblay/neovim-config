@@ -24,8 +24,5 @@ vim.bo.smartindent = true -- Makes indenting smart
 -- Line numbers
 vim.wo.number = true
 
--- Clipboard with everything else
-vim.o.clipboard = "unnamedplus"
-
 -- Don't change number column size because of diagnositc
 vim.wo.signcolumn = "yes"
