@@ -43,5 +43,7 @@ return require('packer').startup(function(use)
 
   -- Languages
   use  'wlangstroth/vim-racket'
+  use 'PhilT/vim-fsharp'
+  use 'neovimhaskell/haskell-vim'
 end)
 

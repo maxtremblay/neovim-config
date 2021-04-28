@@ -19,10 +19,11 @@ vim.o.mouse = "a"
 vim.bo.tabstop = 2
 vim.bo.shiftwidth = 2
 vim.bo.expandtab = true -- Converts tabs to spaces
-vim.bo.smartindent = true -- Makes indenting smart
+-- vim.bo.smartindent = true -- Makes indenting smart
 
 -- Line numbers
 vim.wo.number = true
 
 -- Don't change number column size because of diagnositc
 vim.wo.signcolumn = "yes"
+

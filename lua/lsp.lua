@@ -72,10 +72,13 @@ local lua_settings = {
   }
 }
 
-require'lspconfig'.racket_langserver.setup{
-    cmd = { "racket", "--lib", "racket-langserver" },
-    filetypes = { "racket", "scheme" },
-    on_attach = on_attach,
+require'lspconfig'.hls.setup{
+  on_attach = on_attach,
+  filetypes = { "haskell", "lhaskell" }
+}
+
+require'lspconfig'.elmls.setup{
+  on_attach = on_attach,
 }
 
 -- config that activates keymaps and enables snippet support
