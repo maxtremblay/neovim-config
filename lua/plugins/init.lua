@@ -31,6 +31,7 @@ return require('packer').startup(function(use)
   use  'arcticicestudio/nord-vim'
   use 'ayu-theme/ayu-vim'
   use 'rakr/vim-one'
+  use {"npxbr/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
 
   -- Telescope (awesome fuzzy finder)
   use {
@@ -45,5 +46,13 @@ return require('packer').startup(function(use)
   use  'wlangstroth/vim-racket'
   use 'PhilT/vim-fsharp'
   use 'neovimhaskell/haskell-vim'
+  use 'jakwings/vim-pony'
+
+  -- Terminal
+  use {"akinsho/nvim-toggleterm.lua"}
+
+  -- Hop (cool motions)
+  use 'phaazon/hop.nvim'
+
 end)
 

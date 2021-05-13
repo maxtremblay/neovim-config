@@ -81,6 +81,10 @@ require'lspconfig'.elmls.setup{
   on_attach = on_attach,
 }
 
+require'lspconfig'.jedi_language_server.setup{
+  on_attach = on_attach
+}
+
 -- config that activates keymaps and enables snippet support
 local function make_config()
   local capabilities = vim.lsp.protocol.make_client_capabilities()

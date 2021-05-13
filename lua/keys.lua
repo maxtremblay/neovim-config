@@ -24,7 +24,7 @@ nmap('<Leader>wk', '<C-w>k')
 nmap('<Leader>wl', '<C-w>l')
 
 -- Turn off hlsearch
-nmap('<Leader>h', ':nohlsearch<CR>')
+nmap('<Leader>H', ':nohlsearch<CR>')
 
 -- Telescope
 nmap('<Leader>ff', ':Telescope find_files<CR>')
@@ -37,3 +37,10 @@ nmap('<Leader>fs', ':Telescope spell_suggest<CR>')
 nmap('<Leader>fk', ':Telescope keymaps<CR>')
 nmap('<Leader>fa', ':Telescope lsp_code_actions<CR>')
 nmap('<Leader>fe', ':Telescope lsp_workspace_diagnostics<CR>')
+
+-- Hop
+nmap('<Leader>mw', ':HopWord<CR>')
+nmap('<Leader>ml', ':HopLine<CR>')
+nmap('<Leader>mc', ':HopChar1<CR>')
+nmap('<Leader>md', ':HopChar2<CR>')
+nmap('<Leader>mp', ':HopPattern<CR>')
