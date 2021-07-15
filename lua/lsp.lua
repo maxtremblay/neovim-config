@@ -50,77 +50,34 @@ local on_attach = function(client, bufnr)
   end
 end
 
--- Configure lua language server for neovim development
-local lua_settings = {
-  Lua = {
-    runtime = {
-      -- LuaJIT in the case of Neovim
-      version = 'LuaJIT',
-      path = vim.split(package.path, ';'),
-    },
-    diagnostics = {
-      -- Get the language server to recognize the `vim` global
-      globals = {'vim'},
-    },
-    workspace = {
-      -- Make the server aware of Neovim runtime files
-      library = {
-        [vim.fn.expand('$VIMRUNTIME/lua')] = true,
-        [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
-      },
-    },
-  }
-}
-
-require'lspconfig'.hls.setup{
-  on_attach = on_attach,
-  filetypes = { "haskell", "lhaskell" }
-}
-
-require'lspconfig'.elmls.setup{
+require'lspconfig'.rust_analyzer.setup {
   on_attach = on_attach,
 }
 
-require'lspconfig'.jedi_language_server.setup{
-  on_attach = on_attach
+require'lspconfig'.texlab.setup {
+  on_attach = on_attach,    
+  filetypes = { "plaintex", "tex", "bib" },
+  settings = {
+    texlab = {
+      build = {
+        args = { '%f', '--synctex', '--keep-logs', '--keep-intermediates'},
+        executable = 'textonic',
+        forwardSearchAfter = false,
+        onSave = false
+      }
+    }
+  }
 }
 
--- config that activates keymaps and enables snippet support
-local function make_config()
-  local capabilities = vim.lsp.protocol.make_client_capabilities()
-  capabilities.textDocument.completion.completionItem.snippetSupport = true
-  return {
-    -- enable snippet support
-    capabilities = capabilities,
-    -- map buffer local keybindings when the language server attaches
-    on_attach = on_attach,
-  }
-end
-
--- lsp-install
-local function setup_servers()
-  require'lspinstall'.setup()
-
-  -- get all installed servers
-  local servers = require'lspinstall'.installed_servers()
-
-  for _, server in pairs(servers) do
-    local config = make_config()
-
-    -- Lua specific
-    if server == 'lua' then
-      config.settings = lua_settings
-    end
-
-
-    require'lspconfig'[server].setup(config)
-  end
-end
-
-setup_servers()
-
--- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
-require'lspinstall'.post_install_hook = function ()
-  setup_servers() -- reload installed servers
-  vim.cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
-end
+require'lspconfig'.pyright.setup{
+  on_attach = on_attach,
+  settings = {
+      python = {
+        analysis = {
+          autoSearchPaths = true,
+          diagnosticMode = "workspace",
+          useLibraryCodeForTypes = true
+        }
+      }
+    }
+}

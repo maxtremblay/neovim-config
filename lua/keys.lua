@@ -18,13 +18,13 @@ vim.g.mapleader = ' '
 nmap('<Leader>t', ':NvimTreeToggle<CR>')
 
 -- Window navigation
-nmap('<Leader>wh', '<C-w>h')
-nmap('<Leader>wj', '<C-w>j')
-nmap('<Leader>wk', '<C-w>k')
-nmap('<Leader>wl', '<C-w>l')
+nmap('<C-h>', '<C-w>h')
+nmap('<C-j>', '<C-w>j')
+nmap('<C-k>', '<C-w>k')
+nmap('<C-l>', '<C-w>l')
 
 -- Turn off hlsearch
-nmap('<Leader>H', ':nohlsearch<CR>')
+nmap('<Leader>h', ':nohlsearch<CR>')
 
 -- Telescope
 nmap('<Leader>ff', ':Telescope find_files<CR>')

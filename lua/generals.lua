@@ -27,3 +27,4 @@ vim.wo.number = true
 -- Don't change number column size because of diagnositc
 vim.wo.signcolumn = "yes"
 
+vim.cmd('let g:tex_flavor = "latex"')

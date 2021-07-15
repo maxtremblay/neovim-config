@@ -1,6 +1,2 @@
-vim.o.termguicolors=true
-vim.o.t_Co = '256'
-vim.o.background = 'dark'
-
-vim.cmd('let ayucolor="light"')
-vim.cmd('colorscheme dracula')
+vim.opt.termguicolors = true
+require('colorbuddy').colorscheme('onebuddy')

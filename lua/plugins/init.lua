@@ -8,8 +8,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
   execute 'packadd packer.nvim'
 end
 
-
-return require('packer').startup(function(use)
+require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- Explorer tree
@@ -18,7 +17,6 @@ return require('packer').startup(function(use)
 
   -- LSP
   use 'neovim/nvim-lspconfig'
-  use 'kabouzeid/nvim-lspinstall'
   use 'hrsh7th/nvim-compe'
 
   -- Snippets
@@ -30,8 +28,10 @@ return require('packer').startup(function(use)
   use { 'dracula/vim', as = 'dracula' }
   use  'arcticicestudio/nord-vim'
   use 'ayu-theme/ayu-vim'
-  use 'rakr/vim-one'
   use {"npxbr/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
+  use 'tjdevries/colorbuddy.vim'
+  use 'Th3Whit3Wolf/onebuddy'
+  use 'marko-cerovac/material.nvim'
 
   -- Telescope (awesome fuzzy finder)
   use {
@@ -54,5 +54,21 @@ return require('packer').startup(function(use)
   -- Hop (cool motions)
   use 'phaazon/hop.nvim'
 
+  -- Status line
+  use {
+    'hoob3rt/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  } 
+
+  -- Tree sitter
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
 end)
 
+require('plugins/completion')
+require('plugins/terminal')
+require('plugins/tree')
+require('plugins/lualine')
+require('plugins/tree-sitter')
