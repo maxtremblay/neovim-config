@@ -18,6 +18,7 @@ require('packer').startup(function(use)
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-compe'
+  use 'kabouzeid/nvim-lspinstall'
 
   -- Snippets
   use 'hrsh7th/vim-vsnip'
@@ -26,11 +27,11 @@ require('packer').startup(function(use)
 
   -- Colors
   use { 'dracula/vim', as = 'dracula' }
-  use  'arcticicestudio/nord-vim'
   use 'ayu-theme/ayu-vim'
   use {"npxbr/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
   use 'tjdevries/colorbuddy.vim'
   use 'Th3Whit3Wolf/onebuddy'
+  use 'maaslalani/nordbuddy'
   use 'marko-cerovac/material.nvim'
 
   -- Telescope (awesome fuzzy finder)
@@ -43,10 +44,11 @@ require('packer').startup(function(use)
   use 'b3nj5m1n/kommentary'
 
   -- Languages
-  use  'wlangstroth/vim-racket'
+  use 'wlangstroth/vim-racket'
   use 'PhilT/vim-fsharp'
   use 'neovimhaskell/haskell-vim'
   use 'jakwings/vim-pony'
+  use 'JuliaEditorSupport/julia-vim'
 
   -- Terminal
   use {"akinsho/nvim-toggleterm.lua"}
@@ -59,6 +61,7 @@ require('packer').startup(function(use)
     'hoob3rt/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
   } 
+  
 
   -- Tree sitter
   use {
@@ -72,3 +75,4 @@ require('plugins/terminal')
 require('plugins/tree')
 require('plugins/lualine')
 require('plugins/tree-sitter')
+require('plugins/lsp-install')

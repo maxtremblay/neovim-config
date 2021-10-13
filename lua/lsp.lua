@@ -54,6 +54,10 @@ require'lspconfig'.rust_analyzer.setup {
   on_attach = on_attach,
 }
 
+require'lspconfig'.julials.setup {
+  on_attach = on_attach,
+}
+
 require'lspconfig'.texlab.setup {
   on_attach = on_attach,    
   filetypes = { "plaintex", "tex", "bib" },
@@ -76,7 +80,8 @@ require'lspconfig'.pyright.setup{
         analysis = {
           autoSearchPaths = true,
           diagnosticMode = "workspace",
-          useLibraryCodeForTypes = true
+          useLibraryCodeForTypes = true,
+          typeCheckingMode = "off"
         }
       }
     }

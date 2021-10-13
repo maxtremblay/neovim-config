@@ -44,3 +44,7 @@ nmap('<Leader>ml', ':HopLine<CR>')
 nmap('<Leader>mc', ':HopChar1<CR>')
 nmap('<Leader>md', ':HopChar2<CR>')
 nmap('<Leader>mp', ':HopPattern<CR>')
+
+-- Julia unicode
+vim.g.latex_to_unicode_tab = false
+vim.g.latex_to_unicode_keymap = true
