@@ -58,6 +58,10 @@ require'lspconfig'.julials.setup {
   on_attach = on_attach,
 }
 
+require'lspconfig'.zls.setup {
+  on_attach = on_attach,
+}
+
 require'lspconfig'.texlab.setup {
   on_attach = on_attach,    
   filetypes = { "plaintex", "tex", "bib" },

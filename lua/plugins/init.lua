@@ -49,6 +49,7 @@ require('packer').startup(function(use)
   use 'neovimhaskell/haskell-vim'
   use 'jakwings/vim-pony'
   use 'JuliaEditorSupport/julia-vim'
+  use 'ziglang/zig.vim'
 
   -- Terminal
   use {"akinsho/nvim-toggleterm.lua"}
