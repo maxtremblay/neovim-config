@@ -26,13 +26,15 @@ require('packer').startup(function(use)
   use 'rafamadriz/friendly-snippets'
 
   -- Colors
-  use { 'dracula/vim', as = 'dracula' }
+  use 'Mofiqul/dracula.nvim'
   use 'ayu-theme/ayu-vim'
   use {"npxbr/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
   use 'tjdevries/colorbuddy.vim'
   use 'Th3Whit3Wolf/onebuddy'
   use 'maaslalani/nordbuddy'
   use 'marko-cerovac/material.nvim'
+  use 'rmehri01/onenord.nvim'
+
 
   -- Telescope (awesome fuzzy finder)
   use {

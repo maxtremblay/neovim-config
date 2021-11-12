@@ -1,2 +1,4 @@
 vim.opt.termguicolors = true
-require('colorbuddy').colorscheme('onebuddy')
+-- vim.opt.colorscheme = "dracula"
+vim.cmd[[colorscheme onenord]]
+-- require('colorbuddy').colorscheme('onebuddy')

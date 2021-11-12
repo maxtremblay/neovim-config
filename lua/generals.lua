@@ -27,4 +27,12 @@ vim.wo.number = true
 -- Don't change number column size because of diagnositc
 vim.wo.signcolumn = "yes"
 
-vim.cmd('let g:tex_flavor = "latex"')
+vim.cmd('let g:tex_flavor = "xetex"')
+
+vim.api.nvim_command([[
+  autocmd Filetype tex setlocal tabstop=2
+]])
+
+vim.api.nvim_command([[
+  autocmd Filetype julia setlocal tabstop=4
+]])

@@ -1,6 +1,5 @@
 vim.g.nvim_tree_side = 'left'
 vim.g.nvim_tree_width = 40
-vim.g.nvim_tree_ignore = { '.git' }
 vim.g.nvim_tree_git_hl = 1 -- 0 by default, will enable file highlight for git attributes (can be used without the icons).
 vim.g.nvim_tree_show_icons = {
   git = 0,
@@ -22,5 +21,6 @@ require'nvim-tree'.setup {
     -- allow to open the tree if it was previously closed
     auto_open = true,
   },
+  ignore = { '.git' }
 }
 
